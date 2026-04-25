@@ -1,1 +1,1 @@
-https://github.com/tecnosoluciones-bcn/unalatinaenfinanzas.git
+https://tecnosoluciones-bcn.github.io/unalatinaenfinanzas/
