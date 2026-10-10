@@ -211,7 +211,7 @@
       width: min(47vw, 600px);
       height: calc(100% - 86px);
       object-fit: cover;
-      object-position: center top;
+      object-position: center 30%;
     }
     .hero-content {
       position: relative;
@@ -371,7 +371,7 @@
       color: var(--muted);
     }
     .service-card li { margin-bottom: 9px; }
-    .service-card p { font-size: 14px; margin-bottom: 18px; }
+    .service-card p { font-size: 14px; margin-bottom: 18px; color: var(--muted); }
     .service-badge {
       margin-top: auto;
       padding: 12px;
@@ -390,22 +390,6 @@
       font-size: 12px;
     }
     .service-card .service-badge + .btn { margin-top: 18px; }
-    .service-card.featured {
-      background: var(--black);
-      border-color: var(--black);
-      color: white;
-    }
-    .service-card.featured h3 { color: #F2D6AA; }
-    .service-card.featured ul { color: rgba(255,255,255,.85); }
-    .service-card.featured .service-icon {
-      background: transparent;
-      border: 1px solid rgba(242,214,170,.5);
-      color: #F2D6AA;
-    }
-    .service-card.featured .btn {
-      background: var(--gold);
-      color: var(--black);
-    }
 
     /* BANDA DE VALORES */
     .stats-band {
@@ -546,7 +530,7 @@
       width: 100%;
       height: 600px;
       object-fit: cover;
-      object-position: center;
+      object-position: center 30%;
     }
     .about-photo::after {
       content: "";
@@ -896,7 +880,7 @@
             <a class="btn" href="https://wa.me/34671254137?text=Hola%20Andrea%2C%20quiero%20asesor%C3%ADa%20en%20seguros." target="_blank" rel="noopener noreferrer">Saber más →</a>
           </article>
 
-          <article class="service-card featured reveal" id="finanzas">
+          <article class="service-card reveal" id="finanzas">
             <div class="service-icon"><svg class="icon" aria-hidden="true"><use href="#i-wallet"/></svg></div>
             <h3>Finanzas personales</h3>
             <p>Te ayudo a controlar tu dinero, optimizar tus recursos y construir un plan financiero adaptado a tus necesidades.</p>
@@ -992,7 +976,7 @@
     <section class="section about" id="sobre-mi">
       <div class="container about-grid">
         <div class="about-photo reveal">
-          <img src="sobremi.png" alt="Andrea Fernández, asesora financiera" loading="lazy">
+          <img src="sobremi.jpg" alt="Andrea Fernández, asesora financiera" loading="lazy">
         </div>
 
         <div class="about-copy reveal">
