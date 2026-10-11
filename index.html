@@ -717,9 +717,10 @@
       }
       .hero { min-height: auto; padding-top: 76px; }
       .hero-content { min-height: 650px; padding: 65px 0; }
-      .hero-photo { width: 100%; right: -35%; opacity: .27; }
+      .hero-photo { width: 100%; height: calc(100% - 76px); right: -18%; opacity: .85; }
+      h1, .hero-lead, .eyebrow { text-shadow: 0 2px 14px rgba(40,28,25,.6); }
       .hero::before {
-        background: linear-gradient(90deg,rgba(80,60,55,.94),rgba(80,60,55,.72));
+        background: linear-gradient(90deg,rgba(80,60,55,.82) 0%,rgba(80,60,55,.55) 55%,rgba(80,60,55,.30) 100%);
       }
       h1 { font-size: 45px; }
       .hero-lead { font-size: 16px; }
