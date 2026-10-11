@@ -1,0 +1,13 @@
+{
+  "name": "Andrea Fernández · Asesora financiera",
+  "short_name": "Una latina en finanzas",
+  "lang": "es",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#F3ECE3",
+  "theme_color": "#91766E",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

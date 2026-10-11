@@ -4,756 +4,86 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#91766E">
-  <meta name="description" content="Andrea Fernández, asesora financiera integral en Barcelona. Asesoramiento financiero, hipotecas, seguros y finanzas personales.">
-  <title>Andrea Fernández | Asesora Financiera Integral</title>
-  <link rel="icon" type="image/png" href="logo.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <title>Asesora financiera en Barcelona | Andrea Fernández</title>
+  <meta name="description" content="Andrea Fernández, asesora financiera integral en Barcelona. Te ayudo con ahorro, hipotecas, seguros y planificación familiar. Primera cita gratuita, online o presencial.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://unalatinaenfinanzas.com/">
 
-  <style>
-    :root {
-      --black: #000000;
-      --taupe: #91766E;
-      --rose: #C8A19C;
-      --cream: #F3ECE3;
-      --white: #FFFFFF;
-      --ink: #3F3532;
-      --muted: #776762;
-      --line: #E8DCD5;
-      --gold: #D6B578;
-      --shadow: 0 20px 55px rgba(63,53,50,.10);
-      --radius: 22px;
-    }
+  <!-- Iconos -->
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
-    body {
-      font-family: 'Inter', sans-serif;
-      color: var(--ink);
-      background: var(--white);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-    a { color: inherit; text-decoration: none; }
-    img { display: block; max-width: 100%; }
-    button { font: inherit; }
-    .container { width: min(1180px, calc(100% - 40px)); margin: auto; }
+  <!-- Compartir en redes y WhatsApp -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="Una latina en finanzas">
+  <meta property="og:title" content="Andrea Fernández | Asesora financiera en Barcelona">
+  <meta property="og:description" content="Organiza tu dinero, protege tu futuro. Ahorro, hipotecas, seguros y planificación familiar. Primera cita gratuita.">
+  <meta property="og:url" content="https://unalatinaenfinanzas.com/">
+  <meta property="og:image" content="https://unalatinaenfinanzas.com/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Andrea Fernández, asesora financiera integral en Barcelona">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Andrea Fernández | Asesora financiera en Barcelona">
+  <meta name="twitter:description" content="Ahorro, hipotecas, seguros y planificación familiar. Primera cita gratuita.">
+  <meta name="twitter:image" content="https://unalatinaenfinanzas.com/img/og-image.jpg">
 
-    /* ICONOS (línea fina, heredan el color del contenedor) */
-    .icon {
-      width: 1em;
-      height: 1em;
-      flex-shrink: 0;
-      fill: none;
-      stroke: currentColor;
-      stroke-width: 1.6;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-    .icon.solid { fill: currentColor; stroke: none; }
-
-    /* BOTONES */
-    .btn {
-      position: relative;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 15px 23px;
-      border-radius: 12px;
-      border: 1px solid transparent;
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: .035em;
-      text-transform: uppercase;
-      text-align: center;
-      cursor: pointer;
-      transition: transform .25s, box-shadow .25s, background .25s;
-    }
-    .btn:hover { transform: translateY(-3px); }
-    .btn .icon { font-size: 14px; }
-
-    .btn.gold {
-      overflow: hidden;
-      isolation: isolate;
-      color: var(--black);
-      background: linear-gradient(120deg, #D6B578, #F6DCA2);
-      box-shadow: 0 10px 26px rgba(214,181,120,.28);
-    }
-    .btn.gold::before {
-      content: "";
-      position: absolute;
-      z-index: -1;
-      top: -60%;
-      left: -75%;
-      width: 45%;
-      height: 220%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,.8), transparent);
-      transform: rotate(25deg);
-      animation: shine 3s infinite;
-    }
-    .btn.pulse { animation: pulse 2.2s infinite; }
-    @keyframes shine {
-      0% { left: -75%; }
-      45%, 100% { left: 140%; }
-    }
-    @keyframes pulse {
-      0%,100% { box-shadow: 0 10px 25px rgba(214,181,120,.3), 0 0 0 0 rgba(214,181,120,.3); }
-      50% { box-shadow: 0 14px 32px rgba(214,181,120,.4), 0 0 0 9px rgba(214,181,120,0); }
-    }
-    .btn.outline {
-      color: var(--white);
-      background: transparent;
-      border-color: rgba(255,255,255,.65);
-    }
-    .btn.outline:hover { background: rgba(255,255,255,.12); }
-    .btn.light {
-      background: var(--white);
-      border-color: var(--line);
-      color: var(--ink);
-    }
-    .btn.light:hover { box-shadow: var(--shadow); }
-
-    /* NAVEGACIÓN */
-    .nav {
-      position: fixed;
-      z-index: 100;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background: rgba(145,118,110,.94);
-      border-bottom: 1px solid rgba(255,255,255,.15);
-      backdrop-filter: blur(18px);
-      transition: background .25s;
-    }
-    .nav-inner {
-      height: 86px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 25px;
-    }
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 13px;
-      color: var(--white);
-      flex-shrink: 0;
-    }
-    .brand-logo {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      object-fit: cover;
-      background: var(--white);
-      border: 2px solid var(--gold);
-    }
-    .brand-name {
-      font: 700 23px/1.1 'Playfair Display', serif;
-    }
-    .brand-role {
-      margin-top: 4px;
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-      opacity: .9;
-    }
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 26px;
-      color: var(--white);
-      font-size: 12px;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-    .nav-links a { transition: color .2s; }
-    .nav-links a:hover { color: #F6DCA2; }
-    .mobile-toggle {
-      display: none;
-      background: transparent;
-      border: 1px solid rgba(255,255,255,.5);
-      border-radius: 10px;
-      padding: 8px 12px;
-      color: white;
-      font-size: 22px;
-      cursor: pointer;
-    }
-
-    /* HERO */
-    .hero {
-      position: relative;
-      min-height: 740px;
-      padding-top: 86px;
-      overflow: hidden;
-      background: var(--taupe);
-      color: var(--white);
-    }
-    .hero::before {
-      content: "";
-      position: absolute;
-      z-index: 1;
-      inset: 0;
-      background: linear-gradient(
-        90deg,
-        rgba(80,60,55,.96) 0%,
-        rgba(104,79,72,.91) 42%,
-        rgba(145,118,110,.30) 75%,
-        rgba(145,118,110,.10) 100%
-      );
-    }
-    .hero-photo {
-      position: absolute;
-      right: 4%;
-      bottom: 0;
-      width: min(47vw, 600px);
-      height: calc(100% - 86px);
-      object-fit: cover;
-      object-position: center 30%;
-    }
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      display: grid;
-      grid-template-columns: minmax(0,620px) 1fr;
-      align-items: center;
-      min-height: 654px;
-      padding: 65px 0;
-    }
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 9px 15px;
-      margin-bottom: 25px;
-      border: 1px solid rgba(255,255,255,.4);
-      border-radius: 50px;
-      background: rgba(255,255,255,.08);
-      font-size: 13px;
-      font-weight: 700;
-    }
-    .eyebrow .icon { color: #F2D6AA; font-size: 13px; }
-    h1 {
-      max-width: 670px;
-      margin-bottom: 25px;
-      font: 700 clamp(43px,6vw,74px)/1.04 'Playfair Display',serif;
-      letter-spacing: -.035em;
-    }
-    h1 span { color: #F2D6AA; }
-    .hero-lead {
-      max-width: 580px;
-      margin-bottom: 30px;
-      font-size: 18px;
-      color: rgba(255,255,255,.93);
-    }
-    .actions {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin-bottom: 42px;
-    }
-    .trust-row {
-      display: grid;
-      grid-template-columns: repeat(4,1fr);
-      gap: 12px;
-      max-width: 630px;
-    }
-    .trust-item {
-      padding: 15px 9px;
-      text-align: center;
-      font-size: 12px;
-      font-weight: 600;
-      border-radius: 13px;
-      border: 1px solid rgba(255,255,255,.2);
-      background: rgba(255,255,255,.07);
-      backdrop-filter: blur(8px);
-    }
-    .trust-icon {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 9px;
-      color: #F2D6AA;
-      font-size: 24px;
-    }
-
-    .quote-card {
-      position: absolute;
-      z-index: 3;
-      right: 4%;
-      bottom: 40px;
-      width: 280px;
-      padding: 23px;
-      border-radius: 18px;
-      border: 1px solid rgba(255,255,255,.3);
-      background: rgba(63,53,50,.75);
-      backdrop-filter: blur(15px);
-      box-shadow: var(--shadow);
-    }
-    .quote-mark {
-      color: #F2D6AA;
-      font: 700 42px 'Playfair Display',serif;
-      line-height: 1;
-    }
-    .quote-card p { font-size: 14px; margin: 7px 0 12px; }
-    .signature {
-      color: #F2D6AA;
-      font: italic 18px 'Playfair Display',serif;
-    }
-
-    /* SECCIONES */
-    .section { padding: 85px 0; }
-    .section-head { text-align: center; margin-bottom: 45px; }
-    .section-kicker {
-      margin-bottom: 10px;
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: .17em;
-      text-transform: uppercase;
-      color: var(--taupe);
-    }
-    .section-title {
-      font: 700 clamp(34px,4vw,48px)/1.1 'Playfair Display',serif;
-      color: var(--black);
-    }
-    .section-title::after {
-      content: "";
-      display: block;
-      width: 55px;
-      height: 3px;
-      margin: 20px auto 0;
-      border-radius: 5px;
-      background: var(--rose);
-    }
-
-    /* SERVICIOS */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(4,minmax(0,1fr));
-      gap: 18px;
-    }
-    .service-card {
-      display: flex;
-      flex-direction: column;
-      padding: 29px 23px;
-      min-height: 440px;
-      border: 1px solid var(--line);
-      border-radius: 19px;
-      background: var(--white);
-      box-shadow: var(--shadow);
-      transition: transform .3s, box-shadow .3s;
-    }
-    .service-card:hover {
-      transform: translateY(-7px);
-      box-shadow: 0 25px 55px rgba(63,53,50,.16);
-    }
-    .service-icon {
-      display: grid;
-      place-items: center;
-      width: 62px;
-      height: 62px;
-      margin-bottom: 25px;
-      border-radius: 50%;
-      background: var(--cream);
-      color: var(--taupe);
-      font-size: 27px;
-    }
-    .service-card h3 {
-      margin-bottom: 18px;
-      color: var(--black);
-      font: 700 26px/1.12 'Playfair Display',serif;
-    }
-    .service-card ul {
-      padding-left: 18px;
-      margin-bottom: 20px;
-      font-size: 13px;
-      color: var(--muted);
-    }
-    .service-card li { margin-bottom: 9px; }
-    .service-card p { font-size: 14px; margin-bottom: 18px; color: var(--muted); }
-    .service-badge {
-      margin-top: auto;
-      padding: 12px;
-      border-radius: 10px;
-      background: var(--cream);
-      color: var(--taupe);
-      font-size: 12px;
-      font-weight: 700;
-    }
-    .service-card .btn {
-      width: 100%;
-      margin-top: auto;
-      padding: 13px;
-      background: var(--taupe);
-      color: white;
-      font-size: 12px;
-    }
-    .service-card .service-badge + .btn { margin-top: 18px; }
-
-    /* BANDA DE VALORES */
-    .stats-band {
-      background: var(--rose);
-      padding: 48px 0;
-    }
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(4,1fr);
-    }
-    .stat {
-      display: flex;
-      gap: 15px;
-      padding: 0 25px;
-      border-right: 1px solid rgba(255,255,255,.5);
-    }
-    .stat:last-child { border-right: 0; }
-    .stat-icon {
-      display: grid;
-      place-items: center;
-      flex-shrink: 0;
-      width: 46px;
-      height: 46px;
-      border-radius: 50%;
-      border: 1px solid rgba(63,53,50,.25);
-      background: rgba(255,255,255,.25);
-      color: var(--ink);
-      font-size: 22px;
-    }
-    .stat small {
-      display: block;
-      margin-bottom: 6px;
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-      color: var(--ink);
-    }
-    .stat strong {
-      display: block;
-      font: 700 29px 'Playfair Display',serif;
-      color: var(--black);
-    }
-    .stat p { font-size: 13px; color: var(--ink); }
-
-    /* COLABORACIONES */
-    .partners {
-      padding: 65px 0;
-      background: var(--white);
-    }
-    .partners-box {
-      display: grid;
-      grid-template-columns: .9fr 1.4fr;
-      align-items: center;
-      gap: 35px;
-    }
-    .partners-copy h2 {
-      margin-bottom: 13px;
-      color: var(--black);
-      font: 700 35px/1.1 'Playfair Display',serif;
-    }
-    .partners-copy p { color: var(--muted); font-size: 15px; }
-    .partners-logos {
-      display: grid;
-      grid-template-columns: repeat(3,minmax(0,1fr));
-      gap: 16px;
-    }
-    .partner-logo {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 115px;
-      padding: 18px;
-      background: var(--white);
-      border: 1px solid var(--line);
-      border-radius: 17px;
-      box-shadow: 0 12px 35px rgba(63,53,50,.06);
-      transition: transform .3s, box-shadow .3s;
-    }
-    .partner-logo:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow);
-    }
-    .partner-logo img {
-      width: 100%;
-      max-height: 70px;
-      object-fit: contain;
-    }
-
-    /* PROCESO */
-    .process { background: var(--cream); }
-    .process-grid {
-      display: grid;
-      grid-template-columns: repeat(3,1fr);
-      gap: 20px;
-    }
-    .process-card {
-      padding: 30px;
-      background: var(--white);
-      border: 1px solid var(--line);
-      border-radius: 19px;
-      box-shadow: 0 12px 35px rgba(63,53,50,.05);
-    }
-    .process-number {
-      display: grid;
-      place-items: center;
-      width: 45px;
-      height: 45px;
-      margin-bottom: 18px;
-      border-radius: 50%;
-      background: var(--taupe);
-      color: white;
-      font-weight: 800;
-    }
-    .process-card h3 {
-      margin-bottom: 12px;
-      font: 700 25px 'Playfair Display',serif;
-      color: var(--black);
-    }
-    .process-card p { color: var(--muted); font-size: 15px; }
-
-    /* SOBRE MÍ */
-    .about { background: var(--white); }
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 55px;
-      align-items: center;
-    }
-    .about-photo {
-      position: relative;
-      overflow: hidden;
-      border-radius: 25px;
-      box-shadow: var(--shadow);
-      background: var(--cream);
-    }
-    .about-photo img {
-      width: 100%;
-      height: 600px;
-      object-fit: cover;
-      object-position: center 30%;
-    }
-    .about-photo::after {
-      content: "";
-      position: absolute;
-      inset: 16px;
-      border: 1px solid rgba(255,255,255,.6);
-      border-radius: 17px;
-      pointer-events: none;
-    }
-    .about-copy h2 {
-      margin-bottom: 22px;
-      font: 700 clamp(34px,4vw,45px)/1.1 'Playfair Display',serif;
-      color: var(--black);
-    }
-    .about-copy p {
-      margin-bottom: 18px;
-      color: var(--muted);
-      font-size: 16px;
-    }
-    .pills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 9px;
-      margin-top: 25px;
-    }
-    .pill {
-      padding: 9px 13px;
-      border: 1px solid var(--line);
-      border-radius: 50px;
-      background: var(--cream);
-      font-size: 12px;
-      font-weight: 700;
-      color: var(--taupe);
-    }
-
-    /* CONTACTO */
-    .cta-section {
-      padding: 80px 0;
-      background: var(--cream);
-    }
-    .cta-box {
-      display: grid;
-      grid-template-columns: 1fr 1.3fr;
-      align-items: center;
-      gap: 45px;
-    }
-    .cta-copy h2 {
-      margin-bottom: 18px;
-      font: 700 43px/1.1 'Playfair Display',serif;
-      color: var(--black);
-    }
-    .cta-copy p {
-      margin-bottom: 25px;
-      color: var(--muted);
-      font-size: 16px;
-    }
-    .contact-panel {
-      display: grid;
-      grid-template-columns: 1fr 190px;
-      gap: 20px;
-      padding: 25px;
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      background: var(--white);
-      box-shadow: var(--shadow);
-    }
-    .contact-panel h3 {
-      margin-bottom: 18px;
-      font: 700 26px 'Playfair Display',serif;
-      color: var(--black);
-    }
-    .contact-list { display: grid; gap: 15px; }
-    .contact-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      color: var(--muted);
-      font-size: 13px;
-      font-weight: 600;
-      overflow-wrap: anywhere;
-    }
-    .contact-item .icon {
-      margin-top: 1px;
-      color: var(--taupe);
-      font-size: 17px;
-    }
-    .contact-item:hover { color: var(--taupe); }
-    .mini-appointment {
-      display: block;
-      padding: 22px;
-      border-radius: 15px;
-      background: var(--rose);
-      transition: transform .25s;
-    }
-    .mini-appointment:hover { transform: translateY(-4px); }
-    .mini-appointment > .icon { color: var(--black); font-size: 30px; }
-    .mini-appointment strong {
-      display: block;
-      margin: 12px 0;
-      font: 700 23px/1.15 'Playfair Display',serif;
-      color: var(--black);
-    }
-    .mini-appointment p { font-size: 13px; color: var(--ink); }
-
-    /* FOOTER */
-    .footer {
-      padding: 35px 0;
-      background: var(--black);
-      color: var(--white);
-    }
-    .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 30px;
-    }
-    .footer .brand-logo { width: 50px; height: 50px; }
-    .footer p {
-      max-width: 380px;
-      font-size: 12px;
-      color: rgba(255,255,255,.75);
-    }
-
-    /* WHATSAPP FLOTANTE */
-    .floating-whatsapp {
-      position: fixed;
-      z-index: 110;
-      right: 20px;
-      bottom: 20px;
-      display: grid;
-      place-items: center;
-      width: 58px;
-      height: 58px;
-      border-radius: 50%;
-      background: #25D366;
-      color: white;
-      box-shadow: 0 12px 30px rgba(37,211,102,.3);
-      transition: transform .25s;
-    }
-    .floating-whatsapp:hover { transform: scale(1.1); }
-    .floating-whatsapp svg { width: 30px; height: 30px; fill: currentColor; }
-
-    /* ANIMACIONES */
-    .reveal {
-      opacity: 0;
-      transform: translateY(22px);
-      transition: opacity .7s, transform .7s;
-    }
-    .reveal.visible { opacity: 1; transform: none; }
-
-    /* TABLET */
-    @media(max-width:1050px) {
-      .nav-links { display: none; }
-      .hero-photo { width: 72vw; right: -10%; opacity: .55; }
-      .hero-content { grid-template-columns: 1fr; }
-      .quote-card { display: none; }
-      .services-grid { grid-template-columns: repeat(2,1fr); }
-      .stats-grid { grid-template-columns: repeat(2,1fr); gap: 25px 0; }
-      .stat { border-right: 0; }
-      .partners-box, .about-grid, .cta-box { grid-template-columns: 1fr; }
-      .about-photo img { height: 510px; }
-    }
-
-    /* MÓVIL */
-    @media(max-width:680px) {
-      .container { width: calc(100% - 30px); }
-      .nav-inner { height: 76px; }
-      .brand-logo { width: 48px; height: 48px; }
-      .brand-name { font-size: 19px; }
-      .brand-role { font-size: 9px; }
-      .nav .btn.gold { display: none; }
-      .mobile-toggle { display: block; }
-      .nav-links.open {
-        display: flex;
-        position: absolute;
-        top: 76px;
-        left: 0;
-        width: 100%;
-        padding: 25px;
-        flex-direction: column;
-        gap: 22px;
-        background: var(--taupe);
-        box-shadow: var(--shadow);
+  <!-- Datos estructurados para Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "FinancialService",
+        "@id": "https://unalatinaenfinanzas.com/#negocio",
+        "name": "Andrea Fernández · Una latina en finanzas",
+        "description": "Asesoría financiera integral en Barcelona: ahorro, hipotecas, seguros y planificación familiar.",
+        "url": "https://unalatinaenfinanzas.com/",
+        "image": "https://unalatinaenfinanzas.com/img/og-image.jpg",
+        "logo": "https://unalatinaenfinanzas.com/icon-512.png",
+        "telephone": "+34671254137",
+        "email": "andreafernandez.finanzas@outlook.com",
+        "address": { "@type": "PostalAddress", "addressLocality": "Barcelona", "addressRegion": "Cataluña", "addressCountry": "ES" },
+        "areaServed": [{ "@type": "City", "name": "Barcelona" }, { "@type": "Country", "name": "España" }],
+        "availableLanguage": "es",
+        "knowsAbout": ["Planificación financiera", "Ahorro", "Hipotecas", "Seguros de vida", "Seguros de salud", "Seguros de hogar", "Finanzas personales"],
+        "sameAs": ["https://www.instagram.com/unalatinaenfinanzas/"],
+        "founder": { "@id": "https://unalatinaenfinanzas.com/#andrea" }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://unalatinaenfinanzas.com/#andrea",
+        "name": "Andrea Fernández",
+        "jobTitle": "Asesora financiera integral",
+        "image": "https://unalatinaenfinanzas.com/img/sobremi.webp",
+        "worksFor": { "@id": "https://unalatinaenfinanzas.com/#negocio" },
+        "sameAs": ["https://www.instagram.com/unalatinaenfinanzas/"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://unalatinaenfinanzas.com/#web",
+        "url": "https://unalatinaenfinanzas.com/",
+        "name": "Una latina en finanzas",
+        "inLanguage": "es-ES",
+        "publisher": { "@id": "https://unalatinaenfinanzas.com/#negocio" }
       }
-      .hero { min-height: auto; padding-top: 76px; }
-      .hero-content { min-height: 650px; padding: 65px 0; }
-      .hero-photo { width: 100%; height: calc(100% - 76px); right: -18%; opacity: .85; }
-      h1, .hero-lead, .eyebrow { text-shadow: 0 2px 14px rgba(40,28,25,.6); }
-      .hero::before {
-        background: linear-gradient(90deg,rgba(80,60,55,.82) 0%,rgba(80,60,55,.55) 55%,rgba(80,60,55,.30) 100%);
-      }
-      h1 { font-size: 45px; }
-      .hero-lead { font-size: 16px; }
-      .actions { flex-direction: column; }
-      .actions .btn { width: 100%; }
-      .trust-row { grid-template-columns: repeat(2,1fr); }
-      .section { padding: 60px 0; }
-      .services-grid, .stats-grid, .process-grid { grid-template-columns: 1fr; }
-      .service-card { min-height: auto; }
-      .stat { padding: 12px 0; }
-      .partners-logos { grid-template-columns: 1fr; }
-      .partner-logo { height: 100px; }
-      .about-photo img { height: 420px; }
-      .cta-copy h2 { font-size: 35px; }
-      .contact-panel { grid-template-columns: 1fr; }
-      .footer-inner { flex-direction: column; text-align: center; }
-    }
+    ]
+  }
+  </script>
 
-    @media(prefers-reduced-motion:reduce) {
-      *, *::before, *::after {
-        animation-duration: .01ms !important;
-        transition-duration: .01ms !important;
-        scroll-behavior: auto !important;
-      }
-      .reveal { opacity: 1; transform: none; }
-    }
-  </style>
+  <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/playfair-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/img/yo.webp" as="image" type="image/webp" fetchpriority="high">
+  <link rel="stylesheet" href="/styles.css">
 </head>
 
 <body>
 
   <!-- ICONOS SVG -->
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <svg class="icon-sprite" width="0" height="0" aria-hidden="true">
     <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></symbol>
     <symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
     <symbol id="i-trend" viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></symbol>
@@ -774,7 +104,7 @@
   <nav class="nav" aria-label="Navegación principal">
     <div class="container nav-inner">
       <a class="brand" href="#inicio">
-        <img src="logo.png" alt="Logo Andrea Fernández" class="brand-logo">
+        <img src="/img/logo.webp" alt="Logo Una latina en finanzas" class="brand-logo" width="60" height="60">
         <div>
           <div class="brand-name">Andrea Fernández</div>
           <div class="brand-role">Asesora financiera integral</div>
@@ -791,13 +121,13 @@
 
       <a class="btn gold pulse" href="https://wa.me/34671254137?text=Hola%20Andrea%2C%20quiero%20agendar%20una%20cita." target="_blank" rel="noopener noreferrer">Agendar cita</a>
 
-      <button class="mobile-toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">☰</button>
+      <button class="mobile-toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks"><span aria-hidden="true">☰</span></button>
     </div>
   </nav>
 
   <!-- INICIO -->
   <header class="hero" id="inicio">
-    <img src="yo.png" alt="Andrea Fernández, asesora financiera integral" class="hero-photo">
+    <img src="/img/yo.webp" srcset="/img/yo-600.webp 600w, /img/yo.webp 1000w" sizes="(max-width: 680px) 100vw, 600px" alt="Andrea Fernández, asesora financiera integral en Barcelona" class="hero-photo" width="1000" height="1500" fetchpriority="high">
 
     <div class="container hero-content">
       <div>
@@ -899,7 +229,7 @@
     </section>
 
     <!-- VALORES -->
-    <section class="stats-band">
+    <section class="stats-band" aria-label="Mis valores">
       <div class="container stats-grid">
         <div class="stat reveal">
           <div class="stat-icon"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg></div>
@@ -921,23 +251,23 @@
     </section>
 
     <!-- COLABORACIONES -->
-    <section class="partners">
+    <section class="partners" aria-labelledby="colaboraciones-titulo">
       <div class="container partners-box">
         <div class="partners-copy reveal">
           <div class="section-kicker">Colaboraciones</div>
-          <h2>Trabajo con entidades de confianza</h2>
+          <h2 id="colaboraciones-titulo">Trabajo con entidades de confianza</h2>
           <p>Colaboraciones orientadas a ofrecerte soluciones financieras, hipotecarias y aseguradoras adaptadas a tu caso.</p>
         </div>
 
         <div class="partners-logos reveal">
           <div class="partner-logo">
-            <img src="logoabanca.png" alt="Logo ABANCA" loading="lazy">
+            <img src="/img/logo-abanca.webp" alt="Logo de ABANCA" loading="lazy" width="300" height="169">
           </div>
           <div class="partner-logo">
-            <img src="logoing.png" alt="Logo ING" loading="lazy">
+            <img src="/img/logo-ing.webp" alt="Logo de ING" loading="lazy" width="400" height="202">
           </div>
           <div class="partner-logo">
-            <img src="nnlogo.png" alt="Logo Nationale-Nederlanden" loading="lazy">
+            <img src="/img/logo-nn.webp" alt="Logo de Nationale-Nederlanden" loading="lazy" width="400" height="202">
           </div>
         </div>
       </div>
@@ -977,7 +307,7 @@
     <section class="section about" id="sobre-mi">
       <div class="container about-grid">
         <div class="about-photo reveal">
-          <img src="sobremi.jpg" alt="Andrea Fernández, asesora financiera" loading="lazy">
+          <img src="/img/sobremi.webp" srcset="/img/sobremi-600.webp 600w, /img/sobremi.webp 1000w" sizes="(max-width: 1050px) 100vw, 560px" alt="Retrato de Andrea Fernández, asesora financiera en Barcelona" loading="lazy" width="1000" height="1497">
         </div>
 
         <div class="about-copy reveal">
@@ -1006,7 +336,7 @@
           <h2>Da el primer paso hacia tu tranquilidad financiera.</h2>
           <p>Agenda una cita gratuita y empecemos a construir un plan financiero personalizado.</p>
 
-          <div class="actions" style="margin-bottom:0">
+          <div class="actions actions-flat">
             <a class="btn gold pulse" href="https://wa.me/34671254137?text=Hola%20Andrea%2C%20quiero%20agendar%20una%20cita%20gratuita." target="_blank" rel="noopener noreferrer">Agendar cita <svg class="icon solid" aria-hidden="true"><use href="#i-sparkle"/></svg></a>
             <a class="btn light" href="https://wa.me/34671254137" target="_blank" rel="noopener noreferrer">WhatsApp</a>
           </div>
@@ -1038,7 +368,7 @@
   <footer class="footer">
     <div class="container footer-inner">
       <a class="brand" href="#inicio">
-        <img src="logo.png" alt="Logo Andrea Fernández" class="brand-logo">
+        <img src="/img/logo.webp" alt="Logo Una latina en finanzas" class="brand-logo" width="50" height="50" loading="lazy">
         <div>
           <div class="brand-name">Andrea Fernández</div>
           <div class="brand-role">Asesora financiera integral</div>
@@ -1048,63 +378,44 @@
       <p>Ayudo a personas y familias a tomar el control de sus finanzas y avanzar hacia sus objetivos.</p>
       <p>© 2026 Andrea Fernández. Todos los derechos reservados.</p>
     </div>
+
+    <div class="container footer-legal">
+      <nav aria-label="Información legal">
+        <a href="/aviso-legal">Aviso legal</a>
+        <a href="/privacidad">Política de privacidad</a>
+        <a href="/cookies">Política de cookies</a>
+        <button type="button" class="link-button" data-cookie-settings>Configurar cookies</button>
+      </nav>
+      <p class="footer-disclaimer">La información de esta web es de carácter general y no constituye una recomendación personalizada de inversión. Cada propuesta se estudia de forma individual según tu situación.</p>
+    </div>
   </footer>
 
   <!-- WHATSAPP FLOTANTE -->
   <a class="floating-whatsapp" href="https://wa.me/34671254137?text=Hola%20Andrea%2C%20quiero%20informaci%C3%B3n%20sobre%20tus%20servicios." target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
-    <svg viewBox="0 0 32 32" aria-hidden="true">
-      <path d="M16 .8A15.1 15.1 0 0 0 3 23.6L.9 31l7.6-2A15.2 15.2 0 1 0 16 .8zm0 27.6c-2.3 0-4.5-.6-6.4-1.8l-.5-.3-4.5 1.2 1.2-4.4-.3-.5A12.4 12.4 0 1 1 16 28.4zm6.8-9.3c-.4-.2-2.2-1.1-2.5-1.2-.3-.1-.6-.2-.8.2-.2.4-1 1.2-1.2 1.5-.2.2-.4.3-.8.1-.4-.2-1.6-.6-3-1.9-1.1-1-1.9-2.2-2.1-2.6-.2-.4 0-.6.2-.8l.6-.7.4-.6c.1-.2 0-.5 0-.7l-1.1-2.7c-.3-.7-.6-.6-.8-.6h-.7c-.3 0-.7.1-1.1.5s-1.4 1.4-1.4 3.3 1.4 3.8 1.6 3.7 3.9 5.2c2.3 1.5 4.1 2 5.6 2.2 1.4.2 2.7.2 3.7-.2 1.1-.5 2.2-1.9 2.3-2.7.1-.8.1-1.5-.1-1.7z"/>
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
     </svg>
   </a>
 
-  <script>
-    // Animaciones al hacer scroll
-    const elements = document.querySelectorAll('.reveal');
+  <!-- AVISO DE COOKIES -->
+  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-modal="false" aria-labelledby="cookieTitle" aria-describedby="cookieText" hidden>
+    <div class="cookie-box">
+      <p class="cookie-title" id="cookieTitle">Tu privacidad importa</p>
+      <p id="cookieText">Esta web solo usa almacenamiento técnico necesario para funcionar y recordar tu elección. No usamos cookies de publicidad ni de seguimiento. Si en el futuro activamos estadísticas, solo se cargarán con tu permiso. <a href="/cookies">Más información</a>.</p>
+      <div class="cookie-options" id="cookieOptions" hidden>
+        <label class="cookie-option"><input type="checkbox" checked disabled> <span><strong>Necesarias</strong> · Siempre activas. Guardan tu elección sobre cookies.</span></label>
+        <label class="cookie-option"><input type="checkbox" id="cookieAnalytics"> <span><strong>Estadísticas</strong> · Nos ayudarían a entender cómo se usa la web. Ahora mismo no hay ninguna activa.</span></label>
+      </div>
+      <div class="cookie-actions">
+        <button type="button" class="btn light" data-cookie="reject">Rechazar</button>
+        <button type="button" class="btn light" data-cookie="settings">Configurar</button>
+        <button type="button" class="btn light" data-cookie="save" hidden>Guardar selección</button>
+        <button type="button" class="btn gold" data-cookie="accept">Aceptar</button>
+      </div>
+    </div>
+  </div>
 
-    if ('IntersectionObserver' in window) {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.08 });
-
-      elements.forEach((element) => observer.observe(element));
-    } else {
-      elements.forEach((element) => element.classList.add('visible'));
-    }
-
-    // Menú móvil
-    const toggle = document.getElementById('menuToggle');
-    const links = document.getElementById('navLinks');
-
-    toggle.addEventListener('click', () => {
-      const opened = links.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', String(opened));
-      toggle.setAttribute('aria-label', opened ? 'Cerrar menú' : 'Abrir menú');
-      toggle.textContent = opened ? '✕' : '☰';
-    });
-
-    links.querySelectorAll('a').forEach((link) => {
-      link.addEventListener('click', () => {
-        links.classList.remove('open');
-        toggle.setAttribute('aria-expanded', 'false');
-        toggle.setAttribute('aria-label', 'Abrir menú');
-        toggle.textContent = '☰';
-      });
-    });
-
-    // Navbar al desplazarse
-    const navbar = document.querySelector('.nav');
-
-    window.addEventListener('scroll', () => {
-      navbar.style.background = window.scrollY > 20
-        ? 'rgba(145,118,110,.98)'
-        : 'rgba(145,118,110,.94)';
-    }, { passive: true });
-  </script>
+  <script src="/main.js" defer></script>
 
 </body>
 </html>
