@@ -168,7 +168,7 @@ button { font: inherit; }
   font-weight: 700;
   letter-spacing: .1em;
   text-transform: uppercase;
-  opacity: .9;
+  opacity: 1;
 }
 .nav-links {
   display: flex;
